@@ -37,7 +37,7 @@
                                     {{ $asesor->whatsapp }}
                                 </x-table.cell>
                                 <x-table.cell>
-                                    <a href="{{ route('dashboard.asesor.edit', $asesor->id) }}" class="px-4 py-2 text-md bg-blue-500 text-white rounded-md hover:bg-green-700">Editar</a>
+                                    <a href="{{ route('dashboard.asesores.edit', $asesor->id) }}" class="px-4 py-2 text-md bg-blue-500 text-white rounded-md hover:bg-green-700">Editar</a>
 
                                     <button wire:click="$set('idDelete', {{$asesor->id}})" x-on:click="openModal = true" class="appearance-none text-md px-4 py-1 bg-red-500 text-white rounded-md hover:bg-red-700">Delete</button>
                                     
