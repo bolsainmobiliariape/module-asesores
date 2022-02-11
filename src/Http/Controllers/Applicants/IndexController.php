@@ -10,6 +10,6 @@ class IndexController extends Controller
 {
 	public function index()
 	{
-		return view('module-asesores::dashboard.applicant.indexwrapper');
+		return view('module-asesores::dashboard.applicants.indexwrapper');
 	}
 }
