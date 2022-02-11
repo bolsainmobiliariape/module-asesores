@@ -1,5 +1,5 @@
 <div>
-    <x-details title="Detalles de contacto de Proyeccto" description="Muestra los detalles que el cliente llenó en el formulario">
+    <x-details title="Detalles de Aplicante" description="Muestra los detalles que el cliente llenó en el formulario">
         <x-slot name="action">
             <input wire:click="markAsContacted({{$applicant->id}})" type="checkbox" name="contacted"  {{ $applicant->contacted ? 'checked': ''}}> Contactado
         </x-slot>
