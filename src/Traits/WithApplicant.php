@@ -2,6 +2,8 @@
 
 namespace Bolsainmobiliariape\ModuleAsesores\Traits;
 
+use Bolsainmobiliariape\ModuleAsesores\Models\Applicant;
+
 trait WithApplicant
 {
 	public $applicant;
