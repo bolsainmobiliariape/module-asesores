@@ -2,18 +2,18 @@
 
 namespace Bolsainmobiliariape\ModuleAsesores\Exports;
 
-use Bolsainmobiliariape\ModuleAsesores\Models\Asesor;
+use Bolsainmobiliariape\ModuleAsesores\Models\Applicant;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class AsesoresExport implements FromCollection, WithHeadings
+class ApplicantsExport implements FromCollection, WithHeadings
 {
     /**
     * @return \Illuminate\Support\Collection
     */
     public function collection()
     {
-        $arra = config('module-asesores.asesores.fields');
+        $arra = config('module-asesores.applicants.fields');
 
         $merge = array_merge(array('id'), $arra);
         $merge = array_merge($merge, array('created_at'));
@@ -22,7 +22,7 @@ class AsesoresExport implements FromCollection, WithHeadings
 
     public function headings() : array
     {
-        $arra = config('module-asesores.asesores.fields');
+        $arra = config('module-asesores.applicants.fields');
 
         $merge = array_merge(array('id'), $arra);
         $merge = array_merge($merge, array('Hora / Fecha'));

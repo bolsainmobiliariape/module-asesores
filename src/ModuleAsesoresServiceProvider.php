@@ -9,6 +9,9 @@ use Livewire\Livewire;
 
 use Bolsainmobiliariape\ModuleAsesores\Http\Livewire\Asesores\Index;
 use Bolsainmobiliariape\ModuleAsesores\Http\Livewire\Asesores\Edit;
+use Bolsainmobiliariape\ModuleAsesores\Http\Livewire\Applicants\Index as ApplicantsIndex;
+use Bolsainmobiliariape\ModuleAsesores\Http\Livewire\Applicants\Show as ApplicantsShow;
+
 
 
 class ModuleAsesoresServiceProvider extends PackageServiceProvider
@@ -16,7 +19,11 @@ class ModuleAsesoresServiceProvider extends PackageServiceProvider
     public function bootingPackage()
     {
         Livewire::component('dashboard.asesores.index', Index::class);
-        Livewire::component('dashboard.asesores.edit', Edit::class);        
+        Livewire::component('dashboard.asesores.edit', Edit::class);
+
+        Livewire::component('dashboard.applicants.index', ApplicantsIndex::class);
+        Livewire::component('dashboard.applicants.show', ApplicantsShow::class);
+
     }
 
     public function configurePackage(Package $package): void
