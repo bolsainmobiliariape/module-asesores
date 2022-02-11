@@ -6,8 +6,6 @@ use Livewire\Component;
 use Bolsainmobiliariape\ModuleAsesores\Models\Asesor;
 use Livewire\WithPagination;
 use App\Traits\WithSorting;
-use Maatwebsite\Excel\Facades\Excel;
-use Bolsainmobiliariape\ModuleAsesores\Exports\AsoresExport;
 
 class Index extends Component
 {
@@ -15,16 +13,6 @@ class Index extends Component
     use WithSorting;
 
     public $idDelete;
-
-    public function markAsContacted($id)
-    {
-        $asesor = Asesor::find($id);
-
-        $asesor->contacted = !$asesor->contacted;
-
-        $asesor->save();
-
-    }
 
     public function delete()
     {
@@ -37,11 +25,7 @@ class Index extends Component
 	{
 		return view('module-asesores::asesores.index', [
 			'asesores' => Asesor::orderBy($this->sortField, $this->sortDirection)->paginate($this->perPage)
-		])->layout('');
+		]);
 	}
 
-    public function export()
-    {
-        return Excel::download(new AsesoresExport, 'Asesores.xlsx');
-    }
 }

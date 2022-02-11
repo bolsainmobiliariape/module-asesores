@@ -1,6 +1,6 @@
 <?php
 
-namespace Bolsainmobiliariape\ModuleAsesores\Http\Livewire\Dashboard\Asesores;
+namespace Bolsainmobiliariape\ModuleAsesores\Http\Livewire\Asesores;
 
 use Bolsainmobiliariape\ModuleAsesores\Models\Asesor;
 use Livewire\Component;
@@ -49,6 +49,6 @@ class Edit extends Component
 
     public function render()
     {
-        return view('module-Asesores::dashboard.Asesores.edit')->layoutData(['header' => "Asesores / Form"]);
+        return view('module-Asesores::dashboard.asesores.edit')->layoutData(['header' => "Asesores / Form"]);
     }
 }
