@@ -49,6 +49,6 @@ class Edit extends Component
 
     public function render()
     {
-        return view('module-Asesores::dashboard.asesores.edit')->layoutData(['header' => "Asesores / Form"]);
+        return view('module-asesores::dashboard.asesores.edit')->layoutData(['header' => "Asesores / Form"]);
     }
 }

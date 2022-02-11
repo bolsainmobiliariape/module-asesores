@@ -23,7 +23,7 @@ class Index extends Component
 
 	public function render()
 	{
-		return view('module-asesores::asesores.index', [
+		return view('module-asesores::dashboard.asesores.index', [
 			'asesores' => Asesor::orderBy($this->sortField, $this->sortDirection)->paginate($this->perPage)
 		]);
 	}
