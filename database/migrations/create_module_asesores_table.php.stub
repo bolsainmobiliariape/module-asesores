@@ -12,7 +12,11 @@ return new class extends Migration
             $table->id();
 
             foreach(config('module-asesores.asesores.migrations') as $name => $field){
-                $table->{$field}($name);
+                if(count($field)>1){
+                    $table->{$field[0]}($name)->{$field[1]}();
+                }else{
+                    $table->{$field[0]}($name);
+                }
             }
 
             $table->timestamps();
@@ -22,7 +26,11 @@ return new class extends Migration
             $table->id();
 
             foreach(config('module-asesores.applicants.migrations') as $name => $field){
-                $table->{$field}($name);
+                if(count($field)>1){
+                    $table->{$field[0]}($name)->{$field[1]}();
+                }else{
+                    $table->{$field[0]}($name);
+                }
             }
 
             $table->boolean('contacted')->default(false);
