@@ -15,7 +15,7 @@ trait WithApplicant
 
 	public function rules()
 	{
-		return config('module-asesores.applicants.fields');
+		return config('module-asesores.applicants.rules');
 	}
 
 	public function store()

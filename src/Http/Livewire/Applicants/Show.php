@@ -2,7 +2,7 @@
 
 namespace Bolsainmobiliariape\ModuleAsesores\Http\Livewire\Applicants;
 
-use Bolsainmobiliariape\ModuleProjects\Models\Applicant;
+use Bolsainmobiliariape\ModuleAsesores\Models\Applicant;
 use Livewire\Component;
 
 class Show extends Component
