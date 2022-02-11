@@ -4,6 +4,8 @@ namespace Bolsainmobiliariape\ModuleAsesores\Http\Controllers\Asesores;
 
 use App\Http\Controllers\Controller;
 
+use Bolsainmobiliariape\ModuleAsesores\Models\Asesor;
+
 class IndexController extends Controller
 {
 	public function index()
