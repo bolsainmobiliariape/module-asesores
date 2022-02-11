@@ -17,7 +17,7 @@ class ApplicantsExport implements FromCollection, WithHeadings
 
         $merge = array_merge(array('id'), $arra);
         $merge = array_merge($merge, array('created_at'));
-        return Asesor::select($merge)->get();
+        return Applicant::select($merge)->get();
     }
 
     public function headings() : array
