@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up()
+    {
+        Schema::create('asesors', function (Blueprint $table) {
+            $table->id();
+
+            foreach(config('module-asesores.asesores.migrations') as $name => $field){
+                $table->{$field}($name);
+            }
+
+            $table->timestamps();
+        });
+
+        Schema::create('applicants', function (Blueprint $table) {
+            $table->id();
+
+            foreach(config('module-asesores.applicants.migrations') as $name => $field){
+                $table->{$field}($name);
+            }
+
+            $table->boolean('contacted')->default(false);
+
+            $table->timestamps();
+        });
+    }
+};
