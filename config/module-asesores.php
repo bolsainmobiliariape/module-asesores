@@ -58,10 +58,10 @@ return [
 	    ],
 
 	    "rules" => [
-	        "applicants.name" => ["required", "string", "max:191"],
-	        "applicants.email" => ["required", "email"],
-	        "applicants.phone" => ["required", "string", "max:191"],
-	        "applicants.message" => ["required", "string", "max:191"],
+	        "applicant.name" => ["required", "string", "max:191"],
+	        "applicant.email" => ["required", "email"],
+	        "applicant.phone" => ["required", "string", "max:191"],
+	        "applicant.message" => ["required", "string", "max:191"],
 	    ],
 	],
 ];

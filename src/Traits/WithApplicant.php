@@ -16,7 +16,7 @@ trait WithApplicant
 		return config('module-asesores.applicants.fields');
 	}
 
-	pubic function store()
+	public function store()
 	{
 		$this->validate();
 
@@ -27,6 +27,6 @@ trait WithApplicant
 
 	public function doingAfter()
 	{
-		
+
 	}
 }
