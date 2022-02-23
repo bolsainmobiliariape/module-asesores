@@ -38,6 +38,7 @@ class ModuleAsesoresServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasMigration('create_module_asesores_table')
-            ->hasRoute('asesores');
+            ->hasRoute('asesores')
+            ->hasCommand(ModuleAsesoresCommand::class);
     }
 }
