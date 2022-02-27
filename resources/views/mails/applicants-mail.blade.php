@@ -3,7 +3,7 @@
 
 @component('mail::panel')
 
-@foreach(config('module-asesores.names') as  $key => $name)
+@foreach(config('module-asesores.applicants.names') as  $key => $name)
 - {{ $name }}: {{ $applicant->{$key} }}
 @endforeach
 
