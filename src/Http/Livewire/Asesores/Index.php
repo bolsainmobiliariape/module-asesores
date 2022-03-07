@@ -24,7 +24,7 @@ class Index extends Component
 	public function render()
 	{
 		return view('module-asesores::dashboard.asesores.index', [
-			'asesores' => Asesor::orderBy($this->sortField, $this->sortDirection)->where('id', >, 1)->paginate($this->perPage)
+			'asesores' => Asesor::orderBy($this->sortField, $this->sortDirection)->paginate($this->perPage)
 		]);
 	}
 
